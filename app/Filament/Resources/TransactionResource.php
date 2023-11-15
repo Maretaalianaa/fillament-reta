@@ -53,6 +53,7 @@ class TransactionResource extends Resource
                 TextInput::make('denda'),
                 TextInput::make('jml_pinjam'),
                 TextInput::make('jml_hari')
+                
             ]);
     }
 
@@ -60,7 +61,7 @@ class TransactionResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('member.nama'),
+                TextColumn::make('member.nama')->searchable(),
                 TextColumn::make('book.judul'),
                 TextColumn::make('status')
             ])

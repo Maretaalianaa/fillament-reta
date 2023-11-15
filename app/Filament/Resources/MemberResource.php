@@ -56,7 +56,7 @@ class MemberResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('nama_gambar'),
-                TextColumn::make('nama'),
+                TextColumn::make('nama')->searchable(),
                 TextColumn::make('no_hp')
             ])
             ->filters([

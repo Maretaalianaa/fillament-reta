@@ -42,11 +42,11 @@ class BookResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('rak.kategori'),
-                TextColumn::make('judul'),
-                TextColumn::make('pengarang'),
-                TextColumn::make('penerbit'),
-                TextColumn::make('thn_terbit'),
+                TextColumn::make('rak.kategori')->searchable(),
+                TextColumn::make('judul')->searchable(),
+                TextColumn::make('pengarang')->searchable(),
+                TextColumn::make('penerbit')->searchable(),
+                TextColumn::make('thn_terbit')->searchable(),
                 TextColumn::make('eksemplar')
             ])
             ->filters([
